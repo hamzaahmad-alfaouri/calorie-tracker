@@ -1,0 +1,81 @@
+/* Form styles */
+
+.form {
+    background-color: var(--theme-background-ultralight);
+    padding: 20px;
+    border-radius: var(--theme-border-radius-smooth);
+    border: 1px solid var(--theme-background-normal);
+    display:grid;
+
+
+  }
+  
+  .form label {
+    color: var(--theme-background-dark);
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .form input[type="text"],
+  .calories-input,
+  .form input[type="date"],.form select {
+    background-color:var(--theme-background-light);
+color: var(--theme-background-dark);
+    border: 1px solid var(--theme-background-normal);
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    min-width: 255px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    display: block;
+    box-sizing: border-box;
+  }
+  
+
+  .footer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .footer button {
+    background-color:var(--theme-color-normal);
+    color: var(--theme-background-light)  ;
+    display: block;
+    border:none;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+    width: 200px;
+  }
+
+
+
+  .footer button.secondary{
+background-color: var(--theme-background-light);
+border:1px solid var(--theme-background-normal);
+color: var(--theme-color-normal);
+  }
+
+
+
+  .error {
+    border: 1px solid red;
+    background-color: var(--theme-background-light);
+    color: red;
+  }
+
+  @media (min-width: 786px) {
+    .form {
+      grid-template-rows: repeat(2, 1fr) minmax(40px, auto);
+      grid-template-columns: repeat(2, auto 1fr);
+      column-gap: 1rem;
+    }
+    .footer {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: 100%;
+      
+    }
+  }
+  
